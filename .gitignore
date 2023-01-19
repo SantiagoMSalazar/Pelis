@@ -45,13 +45,4 @@ mysql-connector-java-8.0.30.jar
 .mvn/wrapper/maven-wrapper.properties
 lib/mysql-connector-java-8.0.30.jar
 lib/protobuf-java-3.19.4.jar
-src/main/java/module-info.java
-src/main/java/main/HelloApplication.java
-src/main/java/main/code/Conexion.java
-src/main/java/main/code/Data.java
-src/main/java/main/code/ListMovie.java
-src/main/java/main/code/Movie.java
-src/main/java/main/Vistas/DashController.java
-src/main/java/main/Vistas/HelloController.java
-src/main/java/main/Vistas/loginController.java
-src/main/java/main/Vistas/PeliculaSeleccionadaController.java
+
