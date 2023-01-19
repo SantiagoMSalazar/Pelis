@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="610.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Vistas.DashController">
+   <Pane layoutX="-2.0" prefHeight="610.0" prefWidth="1074.0" styleClass="fondoSombra" stylesheets="@../style.css">
+      <children>
+         <ImageView fitHeight="610.0" fitWidth="1123.0" layoutX="-48.0" pickOnBounds="true">
+            <image>
+               <Image url="@../Images/Portada-inicio.jpg" />
+            </image>
+         </ImageView>
+         <TabPane>
+            <tabs>
+               <Tab text="Películas">
+                  <content>
+                        <AnchorPane prefHeight="581.0" prefWidth="1074.0" styleClass="fondoSombra">
+                            <TableView fx:id="tablaPelis" layoutX="343.0" layoutY="79.0" prefHeight="487.0" prefWidth="719.0">
+                                <columns>
+                                    <TableColumn fx:id="Tid" prefWidth="63.66668701171875" text="idPelícula" />
+                                    <TableColumn fx:id="Ttitulo" prefWidth="184.33331298828125" text="Titulo" />
+                                    <TableColumn fx:id="Tdirector" prefWidth="153.66668701171875" text="Director" />
+                                    <TableColumn fx:id="Tgenero" prefWidth="65.66668701171875" text="Género" />
+                                    <TableColumn fx:id="Tanio" prefWidth="83.33331298828125" text="Año" />
+                                    <TableColumn fx:id="Tcalificacion" minWidth="0.0" prefWidth="81.33331298828125" text="Calificación" />
+                                    <TableColumn fx:id="Testado" prefWidth="85.0" text="Estado" />
+                                </columns>
+                            </TableView>
+                            <Label layoutX="63.0" layoutY="74.0" text="Los Mejores Estrenos" textFill="WHITE">
+                                <font>
+                                    <Font size="17.0" />
+                                </font>
+                            </Label>
+                            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../Images/PoliFansLogo.png" />
+                            </ImageView>
+                            <Pane layoutX="30.0" layoutY="151.0" prefHeight="231.0" prefWidth="282.0" styleClass="CuadroDeTextos" stylesheets="@../style.css">
+                                <TextField fx:id="ID" layoutX="16.0" layoutY="21.0" prefHeight="25.0" prefWidth="56.0" promptText="ID" />
+                                <TextField fx:id="NOMBRE" layoutX="80.0" layoutY="21.0" prefHeight="25.0" prefWidth="189.0" promptText="Nombre de la Película" />
+                                <TextField fx:id="GENERO" layoutX="80.0" layoutY="55.0" prefHeight="25.0" prefWidth="189.0" promptText="Género" />
+                                <TextField fx:id="YEAR" layoutX="16.0" layoutY="56.0" prefHeight="25.0" prefWidth="56.0" promptText="Año" />
+                                <TextField fx:id="DIRECTOR" alignment="CENTER" layoutX="13.0" layoutY="92.0" prefHeight="25.0" prefWidth="258.0" promptText="Director" />
+                                <TextField fx:id="ESTADO" layoutX="15.0" layoutY="131.0" prefHeight="25.0" prefWidth="56.0" promptText="Estado" />
+                                <TextField fx:id="CALIFICACION" layoutX="79.0" layoutY="131.0" prefHeight="25.0" prefWidth="189.0" promptText="Calificación" />
+                                <Button fx:id="BOTONNUEVA" layoutX="14.0" layoutY="171.0" mnemonicParsing="false" onAction="#ingresarPelicula" prefHeight="25.0" prefWidth="261.0" styleClass="botonLogin" stylesheets="@../style.css" text="Ingresar Nueva Película" textFill="WHITE">
+                              <cursor>
+                                 <Cursor fx:constant="HAND" />
+                              </cursor>
+                           </Button>
+                            </Pane>
+                            <TextField fx:id="barrabuscar" layoutX="64.0" layoutY="101.0" onAction="#buscar" prefHeight="32.0" prefWidth="151.0" promptText="Buscar Película" />
+                            <Button layoutX="33.0" layoutY="101.0" mnemonicParsing="false" onAction="#buscar" prefHeight="32.0" prefWidth="33.0" styleClass="lupa">
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Button>
+                            <Button layoutX="40.0" layoutY="401.0" mnemonicParsing="false" onAction="#ordenarAlfabeticamente" prefHeight="25.0" prefWidth="268.0" text="Ordenar Alfabéticamente" />
+                        <CheckBox fx:id="byear" layoutX="240.0" layoutY="92.0" mnemonicParsing="false" text="Año" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="bgenero" layoutX="240.0" layoutY="115.0" mnemonicParsing="false" text="Género" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Button layoutX="343.0" layoutY="24.0" mnemonicParsing="false" onAction="#mostrarTop" prefHeight="35.0" prefWidth="82.0" text="Top 10">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        </AnchorPane>
+                  </content>
+               </Tab>
+            </tabs>
+         </TabPane>
+      </children>
+   </Pane>
+</AnchorPane>

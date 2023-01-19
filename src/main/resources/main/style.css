@@ -1,0 +1,29 @@
+.Fondo{
+    -fx-background-color: linear-gradient(to right, #3C2C5A, #4C3775);
+}
+.borde{
+    -fx-background-color: #281c32;
+}
+.BotonIniciar{
+    -fx-background-color: rgba(255, 0, 0, 0);
+}
+.fondoSombra{
+    -fx-background-color: linear-gradient(to bottom, #000000, rgba(255, 0, 0, 0));
+}
+.botonLogin{
+    -fx-background-color: rgb(54, 45, 133);
+}
+.dashboard{
+    -fx-background-color: linear-gradient(to right, #3C2C5A, #4C3775);
+}
+.tab{
+    -fx-background-color: #cabbeb;
+}
+.CuadroDeTextos{
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 15%;
+}
+.lupa{
+    -fx-background-image: url("Images/lupa.png");
+    -fx-background-color: rgb(52, 22, 86);
+}

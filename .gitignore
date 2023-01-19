@@ -1,0 +1,57 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+hs_err_pid1052.log
+hs_err_pid15844.log
+mvnw
+mvnw.cmd
+mysql-connector-java-8.0.30.jar
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+lib/mysql-connector-java-8.0.30.jar
+lib/protobuf-java-3.19.4.jar
+src/main/java/module-info.java
+src/main/java/main/HelloApplication.java
+src/main/java/main/code/Conexion.java
+src/main/java/main/code/Data.java
+src/main/java/main/code/ListMovie.java
+src/main/java/main/code/Movie.java
+src/main/java/main/Vistas/DashController.java
+src/main/java/main/Vistas/HelloController.java
+src/main/java/main/Vistas/loginController.java
+src/main/java/main/Vistas/PeliculaSeleccionadaController.java
