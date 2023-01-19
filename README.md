@@ -39,9 +39,26 @@ public void ordenarInsercion(){
         }
     }
 ```
-### 
+### Búsqueda Binaria
 ```java
-
+    public ObservableList busquedaBinaria(String peli)
+    {
+        ArrayList<Movie>pelis=listaPelicula;
+        ArrayList<Movie>searched=new ArrayList<Movie>();
+        int     left = 0,
+                right = pelis.size()-1;
+        while (left<=right) {
+            int middle = left + (right - left) / 2;
+            if ( pelis.get(middle).getNombrePelicula().compareToIgnoreCase(peli)==0)
+            {  searched.add(pelis.get(middle));
+                return FXCollections.observableArrayList(searched);}
+            if (pelis.get(middle).getNombrePelicula().compareToIgnoreCase(peli) < 0)
+                left = middle + 1;
+            else
+                right = middle - 1;
+        }
+        return FXCollections.observableArrayList();
+    }
 ```
 
 

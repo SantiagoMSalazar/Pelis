@@ -1,9 +1,7 @@
 package main.code;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
-import main.Vistas.DashController;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,11 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Iterator;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.text.TableView;
 
 public class Data {
     static Connection connect;
@@ -309,6 +303,24 @@ public Data(){
             }
         }
         return aux;
+    }
+    public ObservableList busquedaBinaria(String peli)
+    {
+        ArrayList<Movie>pelis=listaPelicula;
+        ArrayList<Movie>searched=new ArrayList<Movie>();
+        int     left = 0,
+                right = pelis.size()-1;
+        while (left<=right) {
+            int middle = left + (right - left) / 2;
+            if ( pelis.get(middle).getNombrePelicula().compareToIgnoreCase(peli)==0)
+            {  searched.add(pelis.get(middle));
+                return FXCollections.observableArrayList(searched);}
+            if (pelis.get(middle).getNombrePelicula().compareToIgnoreCase(peli) < 0)
+                left = middle + 1;
+            else
+                right = middle - 1;
+        }
+        return FXCollections.observableArrayList();
     }
 }
 

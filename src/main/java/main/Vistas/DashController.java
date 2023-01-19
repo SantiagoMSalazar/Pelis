@@ -131,7 +131,7 @@ public class DashController implements Initializable {
         tablaPelis.setItems(FXCollections.observableArrayList());
         tablaPelis.setItems(listaPeliculas);
     }else{
-        listaPeliculas=base.BuscarPorNombre((barrabuscar.getText()));
+        listaPeliculas=base.busquedaBinaria(barrabuscar.getText());
         tablaPelis.setItems(FXCollections.observableArrayList());
         tablaPelis.setItems(listaPeliculas);
     }
